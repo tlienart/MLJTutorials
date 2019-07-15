@@ -77,10 +77,6 @@ ylabel("Cross entropy")
 
 gcf()
 
-#-
-
-savefig("fig_interm-ensemble_learning-curve.pdf")
-
 # Let's set the number of atoms to 100 for now
 
 bag.n = 100

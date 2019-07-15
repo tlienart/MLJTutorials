@@ -26,5 +26,7 @@ for f in readdir(".")
 end
 ```
 
-This will generate all corresponding notebooks after executing the scripts (which will work assuming you have the relevant dependencies). 
+This will generate all corresponding notebooks after executing the scripts (which will work assuming you have the relevant dependencies).
 If you would like to execute the notebooks yourself step-by-step, add a keyword `execute=false` in the `Literate.notebook` call above.
+
+Alternatively, just use the `generate-notebooks.jl` script.
