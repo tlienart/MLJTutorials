@@ -1,4 +1,5 @@
-gen-notebooks/
+gen-notebooks/*pdf
+gen-notebooks/*checkpoints
 old/
 *DS_Store
 .ipynb_checkpoints
