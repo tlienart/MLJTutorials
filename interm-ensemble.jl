@@ -75,9 +75,11 @@ plot(curves.parameter_values, sum(curves.measurements, dims=2)/nruns)
 xlabel("Number of trees")
 ylabel("Cross entropy")
 
+gcf()
+
 #-
 
-savefig("figures/interm-ensemble_learning_curve.pdf")
+savefig("fig_interm-ensemble_learning-curve.pdf")
 
 # Let's set the number of atoms to 100 for now
 
