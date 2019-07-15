@@ -1,6 +1,18 @@
 # MLJTutorials
 Tutorials for MLJ.jl
 
+## Dependencies required
+
+Comment out the bits you don't want.
+
+```julia
+using Pkg
+# minimal dependencies
+["MLJ", "Random", "RDatasets"] |> Pkg.add
+# visualisation
+["PyPlot"] |> Pkg.add
+```
+
 ## Generating notebooks
 
 To generate notebooks from the scripts, use `Literate.jl` in the folder:
