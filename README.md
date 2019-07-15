@@ -9,8 +9,8 @@ Comment out the bits you don't want.
 using Pkg
 # minimal dependencies
 ["MLJ", "Random", "RDatasets"] |> Pkg.add
-# visualisation
-["PyPlot"] |> Pkg.add
+# other dependencies
+["PyPlot", "Literate"] |> Pkg.add
 ```
 
 ## Generating notebooks
