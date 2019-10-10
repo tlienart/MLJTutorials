@@ -6,6 +6,7 @@ Let's start by generating some dummy data with both numerical values and categor
 ```julia:ex1
 using MLJ, PrettyPrinting
 MLJ.color_off() # hide / @reader: feel free to comment this out
+
 @load KNNRegressor
 X = (age    = [23, 45, 34, 25, 67],
      gender = categorical(['m', 'm', 'f', 'm', 'f']))
@@ -28,7 +29,7 @@ Let's say that we want to apply the following steps:
 1. one hot encode the categorical data
 1. train a KNN regression model
 
-The `@pipeline` macro helps you define such a pipeline of steps to be applied in order:
+The `@pipeline` macro helps you define such a simple (non-branching) pipeline of steps to be applied in order:
 
 ```julia:ex3
 pipe = @pipeline MyPipe(X -> coerce(X, :age=>Continuous),

@@ -1,5 +1,6 @@
 using MLJ, PrettyPrinting
 MLJ.color_off() # hide / @reader: feel free to comment this out
+
 @load KNNRegressor
 X = (age    = [23, 45, 34, 25, 67],
      gender = categorical(['m', 'm', 'f', 'm', 'f']))
