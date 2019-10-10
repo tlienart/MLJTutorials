@@ -20,8 +20,25 @@ scpath = joinpath("generated", "scripts")
 isdir(nbpath) || mkpath(nbpath)
 isdir(scpath) || mkpath(scpath)
 
-Literate.notebook.(ifiles, nbpath, execute=false, documenter=false)
-Literate.script.(ifiles, scpath, documenter=false)
+ACTIVATE = """
+    # Before running this, make sure to activate the environment corresponding to
+    # [this `Project.toml`](https://raw.githubusercontent.com/tlienart/MLJTutorials/master/Project.toml)
+    # and update it so that you get an environment which matches the one used to generate
+    # the tutorials:
+    #
+    # ```julia
+    # cd("MLJTutorials") # cd to folder with the Project.toml
+    # using Pkg
+    # Pkg.activate(".")
+    # Pkg.update()
+    # ```
+    
+    """
+
+preproc(s) = ACTIVATE * s
+
+Literate.notebook.(ifiles, nbpath, preprocess=preproc, execute=false, documenter=false)
+Literate.script.(ifiles, scpath, postprocess=preproc, keep_comments=false, documenter=false)
 
 JS_GHP = """
     var ghpages = require('gh-pages');
