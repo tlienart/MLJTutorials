@@ -3,6 +3,8 @@ Add here global page variables to use throughout your
 website.
 The website_* must be defined for the RSS to work
 ------------------------------------------------------->
+@def prepath = "MLJTutorials"
+
 @def website_title = "MLJ Tutorials"
 @def website_descr = "Tutorials for the MLJ universe"
 @def website_url   = "https://tlienart.github.io/MLJTutorials/"
