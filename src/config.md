@@ -23,3 +23,10 @@ For instance:
 ------------------------------------------------------->
 \newcommand{\R}{\mathbb R}
 \newcommand{\scal}[1]{\langle #1 \rangle}
+
+
+\newcommand{\tutorial}[1]{*Download the* ~~~<a href="https://raw.githubusercontent.com/tlienart/MLJTutorials/gh-pages/notebooks/!#1.ipynb" download><em>notebook</em></a>~~~ *or the* ~~~<a href="https://raw.githubusercontent.com/tlienart/MLJTutorials/gh-pages/scripts/!#1.jl" download><em>raw script</em></a>~~~ *for this tutorial.*
+
+\toc
+
+\literate{/scripts/!#1.jl}}

@@ -3,6 +3,4 @@
 
 # Composing models
 
-\toc
-
-\literate{/scripts/A-composing-models.jl}
+\tutorial{A-composing-models}

@@ -3,6 +3,4 @@
 
 # Tuning a model
 
-\toc
-
-\literate{/scripts/A-model-tuning.jl}
+\tutorial{A-model-tuning}

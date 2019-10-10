@@ -3,6 +3,4 @@
 
 # Choosing and evaluating a model
 
-\toc
-
-\literate{/scripts/A-model-choice.jl}
+\tutorial{A-model-choice}

@@ -3,6 +3,4 @@
 
 # Fit, predict, transform
 
-\toc
-
-\literate{/scripts/A-fit-predict.jl}
+\tutorial{A-fit-predict}

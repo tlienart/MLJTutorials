@@ -3,6 +3,4 @@
 
 # Learning networks
 
-\toc
-
-\literate{/scripts/A-learning-networks.jl}
+\tutorial{A-learning-networks}

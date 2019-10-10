@@ -4,7 +4,7 @@ This readme assumes that your current directory is `MLJTutorials`.
 
 ## For readers
 
-You can read the tutorials [online](address).
+You can read the tutorials [online](https://tlienart.github.io/MLJTutorials/).
 
 If you want to experiment on the side, make sure to **activate this directory** and update so that you get an environment which matches the one used to generate the tutorials:
 
