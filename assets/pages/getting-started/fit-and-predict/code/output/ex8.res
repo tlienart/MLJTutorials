@@ -1,0 +1,1 @@
+CategoricalString{UInt32} "virginica"
