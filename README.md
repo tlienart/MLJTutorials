@@ -8,7 +8,7 @@ You can read the tutorials [online](address).
 
 If you want to experiment on the side, make sure to **activate this directory** and update so that you get an environment which matches the one used to generate the tutorials:
 
-```
+```julia
 using Pkg
 Pkg.activate(".")
 Pkg.update()
@@ -18,7 +18,7 @@ Pkg.update()
 
 To get the raw scripts scrubbed of markdown, run:
 
-```
+```julia
 using Literate
 Literate.script.(joinpath.("scripts", readdir("scripts")), ".",
                  documenter=false)
@@ -26,7 +26,7 @@ Literate.script.(joinpath.("scripts", readdir("scripts")), ".",
 
 In a similar fashion, to get all notebooks, run:
 
-```
+```julia
 Literate.notebook.(joinpath.("scripts", readdir("scripts")), ".",
                    documenter=false)
 ```
