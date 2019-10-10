@@ -52,9 +52,7 @@ The last thing to do is to add a link to the page in `src/_html_parts/head.html`
 <li class="pure-menu-item {{ispage pub/getting-started/my-tutorial.html}}pure-menu-selected{{end}}"><a href="/pub/getting-started/my-tutorial.html" class="pure-menu-link">⊳ My tutorial</a></li>
 ```
 
-### Website visualisation
-
-#### visualise modifications locally
+### Visualise modifications locally
 
 ```julia
 cd("path/to/MLJTutorials")
@@ -68,7 +66,7 @@ If you decide to change some of the code while `serve()` is running, this is fin
 
 **Note**: avoid modifying the literate file, killing the Julia session, then calling `serve()` that sequence can cause weird issues where Julia will complain about the age of the world...
 
-#### merge conflicts
+### Merge conflicts
 
 If when trying to run `serve` you get merge conflicts, do
 
@@ -79,9 +77,9 @@ serve()
 
 the first command will remove all stale generated HTML.
 
-#### push updates
+### Push updates
 
-**Requirements**:
+*Requirements*:
 
 * admin access to the repo
 * `] add Literate JuDoc NodeJS`
