@@ -6,7 +6,7 @@ This readme assumes that your current directory is `MLJTutorials`.
 
 You can read the tutorials [online](https://tlienart.github.io/MLJTutorials/).
 
-If you want to experiment on the side, make sure to **activate this directory** and update so that you get an environment which matches the one used to generate the tutorials:
+If you want to experiment on the side, make sure to **activate a directory** with [this Project.toml](https://raw.githubusercontent.com/tlienart/MLJTutorials/master/Project.toml) file and update so that you get an environment which matches the one used to generate the tutorials:
 
 ```julia
 using Pkg
@@ -14,22 +14,7 @@ Pkg.activate(".")
 Pkg.update()
 ```
 
-### Scripts and notebooks
-
-To get the raw scripts scrubbed of markdown, run:
-
-```julia
-using Literate
-Literate.script.(joinpath.("scripts", readdir("scripts")), ".",
-                 documenter=false)
-```
-
-In a similar fashion, to get all notebooks, run:
-
-```julia
-Literate.notebook.(joinpath.("scripts", readdir("scripts")), ".",
-                   documenter=false)
-```
+Each tutorial has a link at the top for a notebook or the raw script which you can download by right-clicking on the link and selecting "Save file as...".
 
 ## For developers
 
@@ -48,7 +33,7 @@ Say you've added a new script `A-my-tutorial.jl`, follow these steps to add a co
 
 1. copy one of the markdown file available in `src/pages/getting-started` and paste it somewhere appropriate e.g.: `src/pages/getting-started/my-tutorial.md`
 2. modify the title on that page, `# My tutorial`
-3. modify the `\literate` command to `\literate{scripts/A-my-tutorial.jl}`
+3. modify the `\tutorial` command to `\tutorial{A-my-tutorial}` (no extensions)
 
 By now you have at `src/pages/getting-started/my-tutorial.md`
 
@@ -58,9 +43,7 @@ By now you have at `src/pages/getting-started/my-tutorial.md`
 
 # My tutorial
 
-\toc
-
-\literate{/scripts/A-my-tutorial.jl}
+\tutorial{A-my-tutorial}
 ```
 
 The last thing to do is to add a link to the page in `src/_html_parts/head.html`, copy paste the appropriate list item modifying the names so for instance:
@@ -83,7 +66,7 @@ If you have changed the *code* of some of the literate scripts, JuDoc will need 
 
 If you decide to change some of the code while `serve()` is running, this is fine, JuDoc will detect it and trigger an update of the relevant web pages (after evaluating the new code).
 
-**Note**: avoid modifying the literate file, killing the julia session, then calling `serve()` that sequence can cause weird issues where Julia will complain about the age of the world...
+**Note**: avoid modifying the literate file, killing the Julia session, then calling `serve()` that sequence can cause weird issues where Julia will complain about the age of the world...
 
 #### merge conflicts
 
@@ -98,12 +81,18 @@ the first command will remove all stale generated HTML.
 
 #### push updates
 
-Provided you have admin access to the repo,
+**Requirements**:
+
+* admin access to the repo
+* `] add Literate JuDoc NodeJS`
+* install `highlight.js` and `gh-pages` from within Julia: ``run(`sudo $(npm_cmd()) i highlight.js gh-pages`)``
+
+Assuming you have all that, just run
 
 ```julia
-publish()
+include("deploy.jl")
 ```
 
-if you don't, just open a PR.
+This should take ≤ 15 seconds to complete.
 
-**Note**: for this publish step to work well, you will need `highlight.js` and a minifier script, see [the docs](https://tlienart.github.io/JuDoc.jl/dev/#External-dependencies-1).
+If you don't have some of the requirements, or if something failed, just open a PR.

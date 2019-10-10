@@ -12,3 +12,5 @@ Explain that "Getting started" is for people who have a good idea of how things 
 Suggest some ordering in the end to end examples (ames is simpler)
 
 Todo: in the getting started, need intro to the `params` function in like tuning
+
+Tell people again they must activate.
