@@ -3,6 +3,4 @@
 
 # AMES
 
-\toc
-
-\literate{/scripts/EX-AMES.jl}
+\tutorial{EX-AMES}
