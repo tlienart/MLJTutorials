@@ -20,6 +20,8 @@ Each tutorial has a link at the top for a notebook or the raw script which you c
 
 ## For developers
 
+**Important**: use `include("deploy.jl")` to push updates as this also re-generates notebooks and scripts and pushes everything at the right place (see [this point](#push-updates))
+
 ### Literate scripts
 
 1. activate the environment (`] activate .`)
