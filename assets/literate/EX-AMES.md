@@ -6,7 +6,6 @@ As "iris" the dataset is so common that you can load it directly with `@load_ame
 
 ```julia:ex1
 using MLJ, MLJBase, PrettyPrinting, DataFrames, Statistics
-MLJ.color_off() # hide / @reader: feel free to comment this out
 
 X, y = @load_reduced_ames
 @show size(X)

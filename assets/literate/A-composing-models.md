@@ -5,7 +5,6 @@ Let's start by generating some dummy data with both numerical values and categor
 
 ```julia:ex1
 using MLJ, PrettyPrinting
-MLJ.color_off() # hide / @reader: feel free to comment this out
 
 @load KNNRegressor
 X = (age    = [23, 45, 34, 25, 67],

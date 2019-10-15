@@ -1,1 +1,1 @@
-Node{NodalMachine{Standardizer}} @ 4…55
+[34mNode{NodalMachine{Standardizer}} @ 1…26[39m

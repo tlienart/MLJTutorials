@@ -11,7 +11,6 @@ As in "[choosing a model](choosing-a-model.html)", let's load the Iris dataset a
 
 ```julia:ex1
 using MLJ, Statistics
-MLJ.color_off() # hide / @reader: feel free to comment this out
 X, y = @load_iris;
 ```
 

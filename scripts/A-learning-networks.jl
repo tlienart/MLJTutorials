@@ -3,7 +3,7 @@
 # Let's generate a `DataFrame` with some dummy regression data, let's also load the good old ridge regressor.
 
 using MLJ, PrettyPrinting, DataFrames, Random
-MLJ.color_off() # hide / @reader: feel free to comment this out
+MLJ.color_off() #src
 @load RidgeRegressor pkg=MultivariateStats
 
 Random.seed!(5) # for reproducibility

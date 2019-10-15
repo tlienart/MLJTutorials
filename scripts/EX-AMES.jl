@@ -4,7 +4,7 @@
 # As "iris" the dataset is so common that you can load it directly with `@load_ames` and the reduce version via `@load_reduced_ames`
 
 using MLJ, MLJBase, PrettyPrinting, DataFrames, Statistics
-MLJ.color_off() # hide / @reader: feel free to comment this out
+MLJ.color_off() #src
 
 X, y = @load_reduced_ames
 @show size(X)

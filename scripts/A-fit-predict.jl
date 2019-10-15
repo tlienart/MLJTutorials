@@ -10,7 +10,7 @@
 # As in "[choosing a model](choosing-a-model.html)", let's load the Iris dataset and unpack it:
 
 using MLJ, Statistics
-MLJ.color_off() # hide / @reader: feel free to comment this out
+MLJ.color_off() #src
 X, y = @load_iris;
 
 # let's also load the `DecisionTreeClassifier`:

@@ -3,7 +3,7 @@
 # Let's start by generating some dummy data with both numerical values and categorical values:
 
 using MLJ, PrettyPrinting
-MLJ.color_off() # hide / @reader: feel free to comment this out
+MLJ.color_off() #src
 
 @load KNNRegressor
 X = (age    = [23, 45, 34, 25, 67],

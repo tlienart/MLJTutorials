@@ -5,7 +5,6 @@ Let's generate a `DataFrame` with some dummy regression data, let's also load th
 
 ```julia:ex1
 using MLJ, PrettyPrinting, DataFrames, Random
-MLJ.color_off() # hide / @reader: feel free to comment this out
 @load RidgeRegressor pkg=MultivariateStats
 
 Random.seed!(5) # for reproducibility
