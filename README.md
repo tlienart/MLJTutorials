@@ -22,7 +22,7 @@ Each tutorial has a link at the top for a notebook or the raw script which you c
 
 ## For developers
 
-**Important**: use `include("deploy.jl")` to push updates (assuming you have admin rights) as this also re-generates notebooks and scripts and pushes everything at the right place (see [this point](#push-updates))
+**Important**: use `include("deploy.jl")` to push updates (assuming you have admin rights) as this also re-generates notebooks and scripts and pushes everything at the right place (see [this point](#push-updates)).
 
 ### Literate scripts
 
@@ -80,7 +80,7 @@ If you decide to change some of the code while `serve()` is running, this is fin
 
 It can happen that something went wrong and you'd like to force JuDoc to re-evaluate everything to clear things up. To do this, head to the parent markdown file (e.g. `my-tutorial.md`) and add below the other ones:
 
-```
+```julia
 @def reeval = true
 ```
 
@@ -90,7 +90,7 @@ If you get an "age of the world" error, the `reeval` steps above usually works a
 
 If you want to force the reevaluation of everything once, restart a Julia session and use
 
-```
+```julia
 serve(; eval_all=true)
 ```
 
