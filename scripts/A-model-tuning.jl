@@ -11,7 +11,6 @@
 # ```
 
 using MLJ
-MLJ.color_off() # hide / @reader: feel free to comment this out
 X, y = @load_iris
 @load DecisionTreeClassifier
 

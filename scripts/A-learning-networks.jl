@@ -11,7 +11,6 @@
 # ```
 
 using MLJ, PrettyPrinting, DataFrames, Random
-MLJ.color_off() # hide / @reader: feel free to comment this out
 @load RidgeRegressor pkg=MultivariateStats
 
 Random.seed!(5) # for reproducibility

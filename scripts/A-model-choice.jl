@@ -11,7 +11,6 @@
 # ```
 
 using RDatasets, MLJ
-MLJ.color_off() # hide / @reader: feel free to comment this out
 iris = dataset("datasets", "iris")
 
 first(iris, 3) |> pretty
