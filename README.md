@@ -18,9 +18,11 @@ Pkg.insantiate()
 
 Each tutorial has a link at the top for a notebook or the raw script which you can download by right-clicking on the link and selecting "*Save file as...*".
 
+---
+
 ## For developers
 
-**Important**: use `include("deploy.jl")` to push updates as this also re-generates notebooks and scripts and pushes everything at the right place (see [this point](#push-updates))
+**Important**: use `include("deploy.jl")` to push updates (assuming you have admin rights) as this also re-generates notebooks and scripts and pushes everything at the right place (see [this point](#push-updates))
 
 ### Literate scripts
 
